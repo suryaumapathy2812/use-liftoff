@@ -9,11 +9,11 @@ const API_SECRET = process.env.LIVEKIT_API_SECRET;
 const LIVEKIT_URL = process.env.LIVEKIT_URL;
 
 // ... existing environment variables ...
-const AWS_BUCKET = process.env.AWS_BUCKET_NAME;
-const AWS_REGION = process.env.AWS_REGION;
-const AWS_ACCESS_KEY = process.env.AWS_ACCESS_KEY;
-const AWS_SECRET_KEY = process.env.AWS_SECRET_KEY;
-const AWS_ENDPOINT = process.env.AWS_ENDPOINT_URL;
+const AWS_S3_BUCKET = process.env.AWS_S3_BUCKET_NAME;
+const AWS_S3_REGION = process.env.AWS_S3_REGION;
+const AWS_S3_ACCESS_KEY = process.env.AWS_S3_ACCESS_KEY;
+const AWS_S3_SECRET_KEY = process.env.AWS_S3_SECRET_KEY;
+const AWS_S3_ENDPOINT = process.env.AWS_S3_ENDPOINT_URL;
 
 type CreateRoomProps = {
   agent: {
@@ -71,11 +71,11 @@ export async function createRoom(props: CreateRoomProps) {
 
         // Configure S3/MinIO upload
         const s3Config: Partial<S3Upload> = {
-          bucket: AWS_BUCKET!,
-          region: AWS_REGION || "us-east-1",
-          accessKey: AWS_ACCESS_KEY!,
-          secret: AWS_SECRET_KEY!,
-          endpoint: AWS_ENDPOINT!, // For MinIO
+          bucket: AWS_S3_BUCKET!,
+          region: AWS_S3_REGION || "us-east-1",
+          accessKey: AWS_S3_ACCESS_KEY!,
+          secret: AWS_S3_SECRET_KEY!,
+          endpoint: AWS_S3_ENDPOINT!, // For MinIO
           forcePathStyle: true, // Required for MinIO
         };
 
