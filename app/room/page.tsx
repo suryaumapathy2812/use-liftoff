@@ -41,7 +41,7 @@ export default function Page() {
 
     const handleParticipantDisconnected = () => {
       // Check if we're the only participant left
-      if (roomInstance.participants.size === 0) {
+      if (roomInstance.numParticipants === 0) {
         console.log("All other participants left, ending session...");
         router.push("/session-complete");
       }
