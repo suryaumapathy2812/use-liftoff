@@ -1,0 +1,106 @@
+{
+  "reportId": "interview-2024-01-15-tech-senior-uuid",
+  "timestamp": "2024-01-15T14:30:00Z",
+  "candidate": {
+    "name": "John Doe",
+    "profileUploaded": true
+  },
+  "interviewer": {
+    "name": "Senior Technical Interviewer",
+    "type": "tech-senior",
+    "specialty": "Technical & System Design"
+  },
+  "session": {
+    "duration": 2700,
+    "totalQuestions": 8,
+    "questionsAnswered": 7
+  },
+  "performanceScore": {
+    "overall": 78,
+    "breakdown": {
+      "technical": 82,
+      "communication": 75,
+      "problemSolving": 80,
+      "behavioral": 74
+    }
+  },
+  "behavioralAnalysis": {
+    "emotionalState": {
+      "confident": 65,
+      "nervous": 25,
+      "engaged": 80,
+      "frustrated": 10,
+      "overall": 72
+    },
+    "confidenceLevel": 68,
+    "insights": [
+      "Showed strong confidence during technical discussions",
+      "Some hesitation when explaining complex concepts",
+      "Maintained good engagement throughout the session"
+    ]
+  },
+  "speechAnalysis": {
+    "speaking": {
+      "clarityScore": 85,
+      "paceScore": 78,
+      "volumeConsistency": 82,
+      "overall": 82
+    },
+    "listening": {
+      "responseTime": 88,
+      "comprehension": 85,
+      "followUpQuestions": 75,
+      "overall": 83
+    },
+    "proficiency": {
+      "vocabularyRange": 80,
+      "grammarAccuracy": 88,
+      "technicalTerminology": 92,
+      "overall": 87
+    },
+    "overallAverage": 84,
+    "insights": [
+      "Clear and professional communication style",
+      "Good use of technical vocabulary",
+      "Occasionally spoke too quickly when excited"
+    ]
+  },
+  "fieldKnowledgeEvaluation": {
+    "understanding": 85,
+    "applying": 78,
+    "analyzing": 82,
+    "insights": [
+      "Strong theoretical understanding of system design principles",
+      "Good practical application of algorithms",
+      "Excellent analytical thinking in problem breakdown"
+    ]
+  },
+  "reportSummary": {
+    "strengths": [
+      "Strong technical foundation with solid understanding of system design principles",
+      "Excellent analytical thinking when breaking down complex problems",
+      "Clear communication style with appropriate use of technical terminology",
+      "Good engagement and active listening throughout the session"
+    ],
+    "areasForImprovement": [
+      "Work on explaining complex concepts more slowly and clearly",
+      "Practice behavioral questions to improve storytelling",
+      "Focus on maintaining consistent confidence levels",
+      "Develop better time management for longer explanations"
+    ],
+    "overallFeedback": "The candidate demonstrated strong technical capabilities and good communication skills. With focused practice on behavioral aspects and explanation clarity, they would be well-prepared for senior technical roles. The analytical thinking shown during system design questions was particularly impressive.",
+    "recommendation": "Recommended for senior technical positions with additional practice on behavioral interviewing techniques.",
+    "nextSteps": [
+      "Practice explaining technical concepts to non-technical audiences",
+      "Review common behavioral interview frameworks (STAR method)",
+      "Work on time management during complex problem explanations",
+      "Consider mock interviews focused on system design scenarios"
+    ]
+  },
+  "detailedTranscript": {
+    "available": true,
+    "segments": 47,
+    "totalWords": 3420,
+    "averageResponseLength": 72
+  }
+}

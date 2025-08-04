@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": "interview",
+      "name": "Interview",
+      "description": "Practice technical and behavioral interviews with AI interviewers",
+      "icon": "briefcase",
+      "status": "active",
+      "route": "/~/interview"
+    },
+    {
+      "id": "presentation",
+      "name": "Presentation",
+      "description": "Improve your public speaking and presentation skills",
+      "icon": "presentation",
+      "status": "coming_soon",
+      "route": "/~/presentation"
+    },
+    {
+      "id": "speaking",
+      "name": "Speaking",
+      "description": "Practice conversational skills and language fluency",
+      "icon": "microphone",
+      "status": "coming_soon",
+      "route": "/~/speaking"
+    }
+  ]
+}

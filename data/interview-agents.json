@@ -1,0 +1,74 @@
+{
+  "agents": [
+    {
+      "id": "tech-senior",
+      "name": "tech-senior",
+      "display_name": "Senior Technical Interviewer",
+      "description": "Experienced technical interviewer specializing in system design and coding challenges",
+      "type": "interview",
+      "level": "senior",
+      "specialty": "Technical & System Design",
+      "gender": "male",
+      "duration": 45,
+      "avatar": "/avatars/tech-senior.png",
+      "focus_areas": ["algorithms", "system_design", "problem_solving", "technical_communication"],
+      "difficulty": "advanced"
+    },
+    {
+      "id": "behavioral-lead",
+      "name": "behavioral-lead",
+      "display_name": "Leadership Behavioral Interviewer",
+      "description": "Expert in behavioral interviews focusing on leadership and team dynamics",
+      "type": "interview",
+      "level": "senior",
+      "specialty": "Behavioral & Leadership",
+      "gender": "female",
+      "duration": 30,
+      "avatar": "/avatars/behavioral-lead.png", 
+      "focus_areas": ["leadership", "team_dynamics", "conflict_resolution", "communication"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "frontend-specialist",
+      "name": "frontend-specialist",
+      "display_name": "Frontend Technical Interviewer",
+      "description": "Frontend specialist focusing on React, JavaScript, and UI/UX principles",
+      "type": "interview",
+      "level": "mid",
+      "specialty": "Frontend Development",
+      "gender": "male",
+      "duration": 40,
+      "avatar": "/avatars/frontend-specialist.png",
+      "focus_areas": ["react", "javascript", "css", "web_performance", "accessibility"],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "backend-expert",
+      "name": "backend-expert", 
+      "display_name": "Backend Systems Interviewer",
+      "description": "Backend expert specializing in APIs, databases, and scalable systems",
+      "type": "interview",
+      "level": "senior",
+      "specialty": "Backend & Infrastructure",
+      "gender": "female",
+      "duration": 50,
+      "avatar": "/avatars/backend-expert.png",
+      "focus_areas": ["apis", "databases", "microservices", "scalability", "security"],
+      "difficulty": "advanced"
+    },
+    {
+      "id": "product-manager",
+      "name": "product-manager",
+      "display_name": "Product Management Interviewer", 
+      "description": "Product management expert focusing on strategy, metrics, and user experience",
+      "type": "interview",
+      "level": "senior",
+      "specialty": "Product Management",
+      "gender": "male",
+      "duration": 35,
+      "avatar": "/avatars/product-manager.png",
+      "focus_areas": ["product_strategy", "metrics", "user_research", "prioritization", "stakeholder_management"],
+      "difficulty": "intermediate"
+    }
+  ]
+}
