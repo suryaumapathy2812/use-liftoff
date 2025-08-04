@@ -34,9 +34,10 @@
     },
     "confidenceLevel": 68,
     "insights": [
-      "Showed strong confidence during technical discussions",
-      "Some hesitation when explaining complex concepts",
-      "Maintained good engagement throughout the session"
+      "Displayed excellent confidence when discussing familiar technologies (React, Node.js), with clear body language and steady voice",
+      "Showed slight nervousness during system design questions - consider practicing more architectural discussions",
+      "Maintained consistent eye contact and engagement, demonstrating strong interpersonal skills",
+      "Pause-and-think approach worked well for complex problems, showing thoughtful consideration"
     ]
   },
   "speechAnalysis": {
@@ -60,9 +61,10 @@
     },
     "overallAverage": 84,
     "insights": [
-      "Clear and professional communication style",
-      "Good use of technical vocabulary",
-      "Occasionally spoke too quickly when excited"
+      "Articulated technical concepts clearly with appropriate use of industry terminology and examples",
+      "Demonstrated active listening by asking clarifying questions and building on interviewer's points",
+      "Speaking pace increased noticeably during algorithm explanations - consider slowing down for complex topics",
+      "Excellent use of structured responses (problem → approach → solution) that made explanations easy to follow"
     ]
   },
   "fieldKnowledgeEvaluation": {
@@ -70,9 +72,10 @@
     "applying": 78,
     "analyzing": 82,
     "insights": [
-      "Strong theoretical understanding of system design principles",
-      "Good practical application of algorithms",
-      "Excellent analytical thinking in problem breakdown"
+      "Demonstrated solid grasp of database optimization principles, correctly identifying indexing strategies for performance improvements",
+      "Applied appropriate data structures (hash maps, heaps) but missed opportunities to discuss time complexity trade-offs",
+      "Showed strong problem decomposition skills, breaking down the rate limiter design into clear, manageable components",
+      "Understanding of distributed systems concepts is good, though could benefit from more real-world scaling examples"
     ]
   },
   "reportSummary": {
