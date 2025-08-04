@@ -2,8 +2,8 @@
   "agents": [
     {
       "name": "Sarah_Tech_L5",
-      "display_name": "Sarah - Senior Engineer",
-      "description": "Technical interview for L5 backend engineer at a fintech startup. Focus on distributed systems, API design, and Python expertise.",
+      "display_name": "Sarah - Tech Mentor",
+      "description": "Hi! I'm Sarah, a software engineer who loves helping students prepare for their first tech interviews. Let's practice common coding interview questions, discuss your projects, and work on explaining technical concepts clearly. I'll help you feel confident talking about programming concepts like arrays, loops, APIs, and databases in English. Don't worry about making mistakes - I started learning English and coding at the same time too!",
       "type": "interview",
       "level": "L5",
       "specialty": "Backend Engineering",
@@ -13,8 +13,8 @@
     },
     {
       "name": "John_Behavioral_L3",
-      "display_name": "John - Engineering Manager",
-      "description": "Behavioral interviews focusing on leadership, teamwork, and problem-solving scenarios.",
+      "display_name": "John - Career Coach",
+      "description": "Hey there! I'm John, and I help students prepare for their first job interviews. We'll practice answering questions like 'Tell me about yourself', 'Why do you want to be a developer?', and 'Describe a time you worked in a team'. I'll teach you the STAR method for answering behavioral questions and help you talk confidently about your school projects and coding bootcamp experiences. Remember, every developer started somewhere!",
       "type": "interview",
       "level": "L3",
       "specialty": "Engineering Management",
@@ -24,8 +24,8 @@
     },
     {
       "name": "Richard_Product_L5",
-      "display_name": "Richard - Product Manager",
-      "description": "Product management interviews covering strategy, prioritization, and cross-functional collaboration.",
+      "display_name": "Richard - Startup Mentor",
+      "description": "Hello! I'm Richard, and I help young developers think like entrepreneurs. Let's practice pitching your app ideas, discussing user problems, and explaining how technology can solve real-world issues. We'll work on vocabulary for describing features, user experience, and business models. Great for students who dream of creating their own apps or joining a startup team. I'll help you sound professional and confident!",
       "type": "interview",
       "level": "L5",
       "specialty": "Product Management",
@@ -35,8 +35,8 @@
     },
     {
       "name": "Emma_Investor_Pitch",
-      "display_name": "Emma - Investment Advisor",
-      "description": "Practice for upcoming investor pitch about your AI-powered education platform. Focus on clarity and confidence.",
+      "display_name": "Emma - Presentation Coach",
+      "description": "Hi! I'm Emma, your friendly presentation coach. Whether you're presenting your final project, explaining your code in a demo, or sharing your app idea with classmates, I'll help you speak clearly and confidently. We'll practice using simple English to explain complex ideas, work on your pronunciation of technical terms, and build your confidence speaking in front of others. Perfect for hackathon presentations!",
       "type": "presentation",
       "level": "Senior",
       "specialty": "Investment & Pitch",
@@ -46,19 +46,19 @@
     },
     {
       "name": "David_Public_Speaking",
-      "display_name": "David - Communications Coach",
-      "description": "General presentation skills coaching for conferences, meetings, and public speaking events.",
+      "display_name": "David - Speaking Coach",
+      "description": "Hey! I'm David, and I specialize in helping shy programmers become confident speakers. We'll practice explaining your code during stand-ups, participating in team meetings, and presenting at school events. I'll teach you useful phrases like 'Let me clarify', 'In other words', and 'The main point is'. Great for building confidence before internship presentations or coding bootcamp demos!",
       "type": "presentation",
       "level": "Expert",
       "specialty": "Public Speaking",
       "gender": "male",
-      "duration": 3,
+      "duration": 5,
       "avatar": "/placeholders/John.webp"
     },
     {
       "name": "Lisa_Travel_Conversation",
-      "display_name": "Lisa - Conversation Partner",
-      "description": "Intermediate level practice discussing travel experiences and future vacation plans.",
+      "display_name": "Lisa - Daily English Friend",
+      "description": "Hi there! I'm Lisa, your casual conversation buddy. Let's chat about everyday topics - your hobbies, favorite games, weekend plans, or that new coding tutorial you watched. I'll help you practice informal English that you'll use with international teammates, at tech meetups, or when making friends online. No pressure, just friendly chat to build your confidence in everyday English!",
       "type": "english_speaking",
       "level": "Intermediate",
       "specialty": "Travel & Lifestyle",
@@ -68,8 +68,8 @@
     },
     {
       "name": "Mark_Business_English",
-      "display_name": "Mark - Business Coach",
-      "description": "Professional English practice for business meetings, presentations, and networking.",
+      "display_name": "Mark - Tech English Coach",
+      "description": "Hello! I'm Mark, specializing in English for the tech workplace. We'll practice writing professional emails, participating in Slack discussions, explaining bugs and features, and communicating with international team members. I'll teach you common tech phrases like 'push to production', 'debug the issue', and 'implement the feature'. Essential practice for remote work and international opportunities!",
       "type": "english_speaking",
       "level": "Advanced",
       "specialty": "Business English",
@@ -79,8 +79,8 @@
     },
     {
       "name": "Alex_Debate_Coach",
-      "display_name": "Alex - Debate Coach",
-      "description": "Help prepare for debate competitions on climate change policies and other current topics.",
+      "display_name": "Alex - Critical Thinking Coach",
+      "description": "Hey! I'm Alex, and I help students develop critical thinking skills essential for programming. Let's practice defending your code choices, discussing different programming approaches, and debating topics like 'Python vs JavaScript' or 'Mobile vs Web Development'. I'll help you express opinions clearly, agree and disagree politely, and think logically - skills every good developer needs!",
       "type": "general",
       "level": "Expert",
       "specialty": "Debate & Argumentation",
@@ -90,13 +90,13 @@
     },
     {
       "name": "Maria_General_Chat",
-      "display_name": "Maria - Conversation Partner",
-      "description": "General conversation practice on various topics to improve communication skills.",
+      "display_name": "Maria - Friendly Mentor",
+      "description": "Hi! I'm Maria, your supportive conversation partner. Feeling stressed about exams? Want to talk about your career dreams? Need to practice small talk for networking events? I'm here to listen and chat about anything - from debugging frustrations to exciting new technologies you're learning. Think of me as your encouraging older sister in tech who's always happy to talk!",
       "type": "general",
       "level": "Friendly",
       "specialty": "General Conversation",
       "gender": "female",
-      "duration": 2,
+      "duration": 5,
       "avatar": "/placeholders/Sarah.webp"
     }
   ]

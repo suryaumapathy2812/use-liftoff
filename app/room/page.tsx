@@ -6,13 +6,14 @@ import {
   useTracks,
   RoomContext,
 } from "@livekit/components-react";
-import { Room, Track } from "livekit-client";
+import { Room, Track, RoomEvent } from "livekit-client";
 import "@livekit/components-styles";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 export default function Page() {
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const roomId = searchParams!.get("id");
   const username = "user";
@@ -31,6 +32,25 @@ export default function Page() {
 
   useEffect(() => {
     let mounted = true;
+    
+    // Set up room event listeners
+    const handleDisconnected = () => {
+      console.log("Room disconnected, redirecting to completion page...");
+      router.push("/session-complete");
+    };
+
+    const handleParticipantDisconnected = () => {
+      // Check if we're the only participant left
+      if (roomInstance.participants.size === 0) {
+        console.log("All other participants left, ending session...");
+        router.push("/session-complete");
+      }
+    };
+
+    // Add event listeners
+    roomInstance.on(RoomEvent.Disconnected, handleDisconnected);
+    roomInstance.on(RoomEvent.ParticipantDisconnected, handleParticipantDisconnected);
+
     (async () => {
       try {
         const resp = await fetch(
@@ -50,9 +70,12 @@ export default function Page() {
 
     return () => {
       mounted = false;
+      // Remove event listeners
+      roomInstance.off(RoomEvent.Disconnected, handleDisconnected);
+      roomInstance.off(RoomEvent.ParticipantDisconnected, handleParticipantDisconnected);
       roomInstance.disconnect();
     };
-  }, [roomId, roomInstance]);
+  }, [roomId, roomInstance, router]);
 
   return (
     <RoomContext.Provider value={roomInstance}>

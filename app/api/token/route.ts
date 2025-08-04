@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
 
     // Generate participant token
     const participantName = username ?? "user";
-    const participantIdentity = `voice_assistant_user_${Math.floor(
+    const participantIdentity = `${participantName}_${Math.floor(
       Math.random() * 10_000
     )}`;
     const participantToken = await createParticipantToken(
