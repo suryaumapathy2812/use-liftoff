@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   AccessToken,
-  AccessTokenOptions,
-  VideoGrant,
+  type AccessTokenOptions,
+  type VideoGrant,
 } from "livekit-server-sdk";
 
 // NOTE: you are expected to define the following environment variables in `.env.local`:

@@ -47,7 +47,7 @@ export default function DemoPage() {
       if (!acc[agent.type]) {
         acc[agent.type] = [];
       }
-      acc[agent.type].push(agent);
+      (acc[agent.type] ?? []).push(agent);
       return acc;
     }, {} as Record<string, typeof agentData.agents>);
     return grouped;
@@ -76,7 +76,10 @@ export default function DemoPage() {
 
   const handleTypeChange = (type: string) => {
     setSelectedType(type);
-    setSelectedAgent(agentsByType[type][0]); // Select first agent of new type
+    const firstAgent = agentsByType[type]?.[0];
+    if (firstAgent) {
+      setSelectedAgent(firstAgent);
+    }
   };
 
   return (

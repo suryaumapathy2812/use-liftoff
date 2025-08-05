@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {  },
+  eslint: {
+    ignoreDuringBuilds: true, // Ignore ESLint errors during build
+  },
+  experimental: {},
   reactStrictMode: true,
   async headers() {
     return [

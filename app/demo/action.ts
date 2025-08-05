@@ -1,6 +1,6 @@
 "use server";
 
-import { CreateOptions, EgressClient, EncodedFileOutput, EncodedFileType, RoomEgress, RoomServiceClient, S3Upload } from "livekit-server-sdk";
+import { type CreateOptions, EgressClient, EncodedFileOutput, EncodedFileType, RoomEgress, RoomServiceClient, S3Upload } from "livekit-server-sdk";
 import { redirect } from "next/navigation";
 
 // NOTE: you are expected to define the following environment variables in `.env.local`:
@@ -64,7 +64,7 @@ export async function createRoom(props: CreateRoomProps) {
 
     // start recording if enabled
 
-    let egressInfo = null;
+    let egressInfo: any = null;
     if (props.enableRecording ?? true) {
       try {
         const egressClient = new EgressClient(LIVEKIT_URL, API_KEY, API_SECRET);

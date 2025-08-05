@@ -1,6 +1,7 @@
 "use server";
 
-import { CreateOptions, EgressClient, EncodedFileOutput, EncodedFileType, RoomServiceClient, S3Upload } from "livekit-server-sdk";
+import { EgressClient, RoomServiceClient, EncodedFileOutput, EncodedFileType } from "livekit-server-sdk";
+import type { CreateOptions, S3Upload } from "livekit-server-sdk";
 import { redirect } from "next/navigation";
 import jobDescriptions from "../../../../data/job-descriptions.json";
 
@@ -85,7 +86,7 @@ export async function createInterviewSession(props: CreateInterviewSessionProps)
     const room = await roomService.createRoom(roomOptions);
 
     // Start recording if enabled
-    let egressInfo = null;
+    let egressInfo: any = null;
     if (props.enableRecording ?? true) {
       try {
         const egressClient = new EgressClient(LIVEKIT_URL, API_KEY, API_SECRET);
