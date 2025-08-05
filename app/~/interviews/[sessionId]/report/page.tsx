@@ -12,7 +12,7 @@ function RadarChart({ data, labels }: { data: number[]; labels: string[] }) {
   const size = 200;
   const center = size / 2;
   const maxRadius = 80;
-  
+
   // Generate points for the polygon
   const points = data.map((value, index) => {
     const angle = (index / data.length) * 2 * Math.PI - Math.PI / 2;
@@ -100,7 +100,7 @@ export default function InterviewReportsPage() {
                 {new Date(report.timestamp).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
               <h1 className="text-3xl font-bold mb-6">Interview Performance Report</h1>
-              
+
               <div className="flex items-center justify-center gap-8 mb-6">
                 <div className="text-center">
                   <div className="text-5xl font-bold mb-1">{report.performanceScore.overall}%</div>
@@ -109,16 +109,16 @@ export default function InterviewReportsPage() {
                 <div className="w-px h-16 bg-blue-400"></div>
                 <div className="text-center">
                   <div className="text-2xl font-semibold mb-1">
-                    {report.performanceScore.overall >= 80 ? 'Excellent' : 
-                     report.performanceScore.overall >= 70 ? 'Good' :
-                     report.performanceScore.overall >= 60 ? 'Satisfactory' : 'Needs Improvement'}
+                    {report.performanceScore.overall >= 80 ? 'Excellent' :
+                      report.performanceScore.overall >= 70 ? 'Good' :
+                        report.performanceScore.overall >= 60 ? 'Satisfactory' : 'Needs Improvement'}
                   </div>
                   <div className="text-blue-100 text-sm">Performance Level</div>
                 </div>
               </div>
-              
+
               <p className="text-blue-100 max-w-2xl mx-auto">
-                You performed better than <span className="font-semibold text-white">{report.performanceScore.overall}%</span> of candidates 
+                You performed better than <span className="font-semibold text-white">{report.performanceScore.overall}%</span> of candidates
                 in your {report.session.duration / 60}-minute session with {report.interviewer.name}
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function InterviewReportsPage() {
           className="bg-white rounded-xl shadow-lg p-8 mb-8"
         >
           <h2 className="text-xl font-bold text-[#1E2B3A] mb-6">Performance Analysis</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Behavioral Analysis */}
             <div>
@@ -142,7 +142,7 @@ export default function InterviewReportsPage() {
                 <h3 className="text-lg font-semibold text-[#1E2B3A]">Behavioral</h3>
                 <span className="ml-auto text-2xl font-bold text-[#6366F1]">{report.behavioralAnalysis.emotionalState.overall}%</span>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-3 mb-4">
                 {Object.entries(report.behavioralAnalysis.emotionalState)
                   .filter(([key]) => key !== 'overall')
@@ -153,7 +153,7 @@ export default function InterviewReportsPage() {
                     </div>
                   ))}
               </div>
-              
+
               <div className="space-y-2">
                 {report.behavioralAnalysis.insights.slice(0, 2).map((insight, index) => (
                   <div key={index} className="flex items-start gap-2">
@@ -171,7 +171,7 @@ export default function InterviewReportsPage() {
                 <h3 className="text-lg font-semibold text-[#1E2B3A]">Communication</h3>
                 <span className="ml-auto text-2xl font-bold text-[#10B981]">{report.speechAnalysis.overallAverage}%</span>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="p-3 bg-green-50 rounded-lg">
                   <div className="text-xs text-gray-600 mb-1">Speaking</div>
@@ -190,7 +190,7 @@ export default function InterviewReportsPage() {
                   <div className="text-lg font-bold text-[#10B981]">{report.speechAnalysis.proficiency.overall}%</div>
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 {report.speechAnalysis.insights.slice(0, 2).map((insight, index) => (
                   <div key={index} className="flex items-start gap-2">
@@ -207,12 +207,12 @@ export default function InterviewReportsPage() {
                 <BookOpen size={20} className="text-[#8B5CF6]" />
                 <h3 className="text-lg font-semibold text-[#1E2B3A]">Field Knowledge</h3>
                 <span className="ml-auto text-2xl font-bold text-[#8B5CF6]">
-                  {Math.round((report.fieldKnowledgeEvaluation.understanding + 
-                               report.fieldKnowledgeEvaluation.applying + 
-                               report.fieldKnowledgeEvaluation.analyzing) / 3)}%
+                  {Math.round((report.fieldKnowledgeEvaluation.understanding +
+                    report.fieldKnowledgeEvaluation.applying +
+                    report.fieldKnowledgeEvaluation.analyzing) / 3)}%
                 </span>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="p-3 bg-purple-50 rounded-lg">
                   <div className="text-xs text-gray-600 mb-1">Understanding</div>
@@ -227,7 +227,7 @@ export default function InterviewReportsPage() {
                   <div className="text-lg font-bold text-[#8B5CF6]">{report.fieldKnowledgeEvaluation.analyzing}%</div>
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 {report.fieldKnowledgeEvaluation.insights.slice(0, 2).map((insight, index) => (
                   <div key={index} className="flex items-start gap-2">
@@ -248,16 +248,15 @@ export default function InterviewReportsPage() {
           className="bg-white rounded-xl shadow-lg p-8 mb-8"
         >
           <h2 className="text-xl font-bold text-[#1E2B3A] mb-6">Detailed Insights</h2>
-          
+
           {/* Tab Navigation */}
           <div className="flex gap-4 mb-6 border-b border-gray-200">
             <button
               onClick={() => setActiveTab('behavioral')}
-              className={`pb-3 px-1 text-sm font-medium transition-colors ${
-                activeTab === 'behavioral' 
-                  ? 'text-[#6366F1] border-b-2 border-[#6366F1]' 
+              className={`pb-3 px-1 text-sm font-medium transition-colors ${activeTab === 'behavioral'
+                  ? 'text-[#6366F1] border-b-2 border-[#6366F1]'
                   : 'text-gray-500 hover:text-gray-700'
-              }`}
+                }`}
             >
               <div className="flex items-center gap-2">
                 <Brain size={16} />
@@ -266,11 +265,10 @@ export default function InterviewReportsPage() {
             </button>
             <button
               onClick={() => setActiveTab('speech')}
-              className={`pb-3 px-1 text-sm font-medium transition-colors ${
-                activeTab === 'speech' 
-                  ? 'text-[#10B981] border-b-2 border-[#10B981]' 
+              className={`pb-3 px-1 text-sm font-medium transition-colors ${activeTab === 'speech'
+                  ? 'text-[#10B981] border-b-2 border-[#10B981]'
                   : 'text-gray-500 hover:text-gray-700'
-              }`}
+                }`}
             >
               <div className="flex items-center gap-2">
                 <MessageCircle size={16} />
@@ -279,11 +277,10 @@ export default function InterviewReportsPage() {
             </button>
             <button
               onClick={() => setActiveTab('knowledge')}
-              className={`pb-3 px-1 text-sm font-medium transition-colors ${
-                activeTab === 'knowledge' 
-                  ? 'text-[#8B5CF6] border-b-2 border-[#8B5CF6]' 
+              className={`pb-3 px-1 text-sm font-medium transition-colors ${activeTab === 'knowledge'
+                  ? 'text-[#8B5CF6] border-b-2 border-[#8B5CF6]'
                   : 'text-gray-500 hover:text-gray-700'
-              }`}
+                }`}
             >
               <div className="flex items-center gap-2">
                 <BookOpen size={16} />
@@ -311,7 +308,7 @@ export default function InterviewReportsPage() {
                       </div>
                     ))}
                 </div>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-[#1E2B3A] mb-3">Key Observations</h4>
                   <div className="space-y-3">
@@ -325,7 +322,7 @@ export default function InterviewReportsPage() {
                 </div>
               </motion.div>
             )}
-            
+
             {activeTab === 'speech' && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -351,7 +348,7 @@ export default function InterviewReportsPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-sm font-medium text-gray-600 mb-2">Listening Skills</h5>
                     <div className="space-y-2 text-xs">
@@ -369,7 +366,7 @@ export default function InterviewReportsPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h5 className="text-sm font-medium text-gray-600 mb-2">Language Proficiency</h5>
                     <div className="space-y-2 text-xs">
@@ -388,7 +385,7 @@ export default function InterviewReportsPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-[#1E2B3A] mb-3">Communication Insights</h4>
                   <div className="space-y-3">
@@ -402,7 +399,7 @@ export default function InterviewReportsPage() {
                 </div>
               </motion.div>
             )}
-            
+
             {activeTab === 'knowledge' && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -411,7 +408,7 @@ export default function InterviewReportsPage() {
                 className="space-y-4"
               >
                 <div className="mb-6">
-                  <RadarChart 
+                  <RadarChart
                     data={[
                       report.fieldKnowledgeEvaluation.understanding,
                       report.fieldKnowledgeEvaluation.applying,
@@ -420,7 +417,7 @@ export default function InterviewReportsPage() {
                     labels={['Understanding', 'Applying', 'Analyzing']}
                   />
                 </div>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-[#1E2B3A] mb-3">Technical Assessment</h4>
                   <div className="space-y-3">
@@ -530,9 +527,9 @@ export default function InterviewReportsPage() {
             </button>
           </Link>
 
-          <Link href="/~">
+          <Link href="/~/interview">
             <button className="rounded-full px-6 py-3 text-[14px] font-semibold transition-all flex items-center justify-center border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 no-underline gap-x-2 active:scale-95 scale-100 duration-75">
-              Back to Categories
+              Back to Interviews
             </button>
           </Link>
         </motion.div>
