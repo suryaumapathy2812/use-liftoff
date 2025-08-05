@@ -31,11 +31,11 @@ export default function ResumePage() {
           <div className="w-16 h-16 bg-[#407BBF]/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <FileText className="w-8 h-8 text-[#407BBF]" />
           </div>
-          
+
           <h2 className="text-xl font-bold text-[#1E2B3A] mb-4">
             Upload Your Resume
           </h2>
-          
+
           <p className="text-gray-600 mb-8 max-w-md mx-auto">
             Upload your resume to get personalized interview questions and feedback based on your experience and skills.
           </p>
@@ -80,7 +80,7 @@ export default function ResumePage() {
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start">
               <span className="w-2 h-2 bg-[#407BBF] rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              Keep it concise and relevant to the job you're applying for
+              Keep it concise and relevant to the job you&apos;re applying for
             </li>
             <li className="flex items-start">
               <span className="w-2 h-2 bg-[#407BBF] rounded-full mt-2 mr-3 flex-shrink-0"></span>
