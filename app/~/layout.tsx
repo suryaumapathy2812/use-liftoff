@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { gradient } from "@/components/Gradient";
-import { 
-  LayoutDashboard, 
-  FileText, 
-  MessageSquare, 
-  BarChart3, 
+import {
+  LayoutDashboard,
+  FileText,
+  MessageSquare,
+  BarChart3,
   Menu,
   X,
   Home
@@ -72,9 +72,9 @@ export default function DashboardLayout({
               transition={{ type: "spring", bounce: 0, duration: 0.4 }}
               className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:hidden"
             >
-              <SidebarContent 
-                navigation={navigation} 
-                isActive={isActive} 
+              <SidebarContent
+                navigation={navigation}
+                isActive={isActive}
                 onClose={() => setSidebarOpen(false)}
                 mobile={true}
               />
@@ -85,8 +85,8 @@ export default function DashboardLayout({
         {/* Desktop sidebar */}
         <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
           <div className="flex flex-col flex-grow bg-white shadow-lg border-r border-gray-200/50 relative z-10">
-            <SidebarContent 
-              navigation={navigation} 
+            <SidebarContent
+              navigation={navigation}
               isActive={isActive}
               mobile={false}
             />
@@ -104,7 +104,7 @@ export default function DashboardLayout({
             >
               <Menu className="h-6 w-6" />
             </button>
-            
+
             <div className="flex-1 text-sm font-semibold leading-6 text-[#1E2B3A]">
               Liftoff Dashboard
             </div>
@@ -122,12 +122,12 @@ export default function DashboardLayout({
   );
 }
 
-function SidebarContent({ 
-  navigation, 
-  isActive, 
-  onClose, 
-  mobile 
-}: { 
+function SidebarContent({
+  navigation,
+  isActive,
+  onClose,
+  mobile
+}: {
   navigation: typeof navigation;
   isActive: (item: typeof navigation[0]) => boolean;
   onClose?: () => void;
@@ -161,17 +161,15 @@ function SidebarContent({
                 onClick={mobile ? onClose : undefined}
                 className={`
                   group flex gap-x-3 rounded-lg p-3 text-sm leading-6 font-medium transition-all duration-200
-                  ${
-                    isActive(item)
-                      ? "bg-[#407BBF]/10 text-[#407BBF] shadow-sm"
-                      : "text-gray-700 hover:text-[#407BBF] hover:bg-gray-50"
+                  ${isActive(item)
+                    ? "bg-[#407BBF]/10 text-[#407BBF] shadow-sm"
+                    : "text-gray-700 hover:text-[#407BBF] hover:bg-gray-50"
                   }
                 `}
               >
                 <item.icon
-                  className={`h-5 w-5 shrink-0 transition-colors ${
-                    isActive(item) ? "text-[#407BBF]" : "text-gray-400 group-hover:text-[#407BBF]"
-                  }`}
+                  className={`h-5 w-5 shrink-0 transition-colors ${isActive(item) ? "text-[#407BBF]" : "text-gray-400 group-hover:text-[#407BBF]"
+                    }`}
                 />
                 {item.name}
               </Link>
