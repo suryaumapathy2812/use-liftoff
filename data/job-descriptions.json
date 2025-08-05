@@ -1,0 +1,69 @@
+{
+  "jobDescriptions": [
+    {
+      "id": "jd-001",
+      "company": "TechCorp Solutions",
+      "companyLogo": "/logos/techcorp.png",
+      "role": "Senior Full Stack Developer",
+      "location": "Bangalore, India",
+      "experience": "5-8 years",
+      "postedDate": "2025-08-01",
+      "jobType": "Full-time",
+      "salary": "₹25-35 LPA",
+      "skills": ["React", "Node.js", "MongoDB", "AWS", "TypeScript", "GraphQL"],
+      "description": "## About TechCorp Solutions\n\nTechCorp Solutions is a leading fintech company revolutionizing digital payments across India. We're building the next generation of financial services that empower millions of users.\n\n## Job Description\n\nWe are looking for a **Senior Full Stack Developer** to join our core engineering team. You will be responsible for designing, developing, and maintaining scalable web applications that serve millions of users.\n\n### Key Responsibilities\n\n- Design and implement robust, scalable, and secure features using modern tech stack\n- Lead technical discussions and mentor junior developers\n- Collaborate with product managers and designers to define feature specifications\n- Write clean, maintainable code with comprehensive test coverage\n- Optimize application performance and ensure high availability\n- Participate in code reviews and contribute to technical documentation\n\n### Required Skills\n\n- **5+ years** of experience in full-stack development\n- Strong proficiency in **React.js** and modern JavaScript/TypeScript\n- Extensive experience with **Node.js** and Express.js\n- Deep understanding of **MongoDB** and database design principles\n- Hands-on experience with **AWS** services (EC2, S3, Lambda, etc.)\n- Proficiency in **GraphQL** and RESTful API design\n- Experience with microservices architecture\n- Strong understanding of web security best practices\n\n### Nice to Have\n\n- Experience with containerization (Docker, Kubernetes)\n- Knowledge of CI/CD pipelines\n- Contribution to open-source projects\n- Experience in fintech domain\n\n### What We Offer\n\n- Competitive salary and stock options\n- Flexible working hours and remote work options\n- Health insurance for you and your family\n- Learning and development budget\n- MacBook Pro and ergonomic workspace setup"
+    },
+    {
+      "id": "jd-002",
+      "company": "GlobalTech India",
+      "companyLogo": "/logos/globaltech.png",
+      "role": "Frontend Engineer - React",
+      "location": "Hyderabad, India (Hybrid)",
+      "experience": "3-5 years",
+      "postedDate": "2025-08-02",
+      "jobType": "Full-time",
+      "salary": "₹15-22 LPA",
+      "skills": ["React", "Redux", "JavaScript", "CSS", "HTML5", "Jest"],
+      "description": "## About GlobalTech India\n\nGlobalTech India is the Indian arm of a Fortune 500 technology company, focusing on building world-class products for global markets. Our Hyderabad office is a center of excellence for frontend innovation.\n\n## Role Overview\n\nWe're seeking a talented **Frontend Engineer** specializing in React to create exceptional user experiences for our enterprise products used by millions globally.\n\n### What You'll Do\n\n- Build responsive, performant web applications using React and modern JavaScript\n- Implement pixel-perfect UI components based on design specifications\n- Collaborate with backend engineers to integrate APIs\n- Write unit and integration tests to ensure code quality\n- Optimize applications for maximum speed and scalability\n- Participate in agile ceremonies and contribute to sprint planning\n\n### Essential Requirements\n\n- **3-5 years** of hands-on experience with React.js\n- Strong proficiency in **JavaScript ES6+** and modern web standards\n- Experience with state management using **Redux** or similar libraries\n- Solid understanding of **CSS3**, **HTML5**, and responsive design\n- Experience with testing frameworks like **Jest** and React Testing Library\n- Understanding of web accessibility standards (WCAG)\n- Strong problem-solving skills and attention to detail\n\n### Preferred Qualifications\n\n- Experience with TypeScript\n- Knowledge of Next.js or similar frameworks\n- Familiarity with design systems and component libraries\n- Experience with performance optimization techniques\n- Understanding of SEO principles\n\n### Benefits\n\n- Industry-leading compensation\n- Flexible hybrid work model (3 days office, 2 days remote)\n- Annual performance bonuses\n- Professional development opportunities\n- International collaboration opportunities"
+    },
+    {
+      "id": "jd-003",
+      "company": "StartupX",
+      "companyLogo": "/logos/startupx.png",
+      "role": "Backend Engineer - Python",
+      "location": "Mumbai, India",
+      "experience": "2-4 years",
+      "postedDate": "2025-07-30",
+      "jobType": "Full-time",
+      "salary": "₹12-18 LPA",
+      "skills": ["Python", "Django", "PostgreSQL", "Redis", "Docker", "REST APIs"],
+      "description": "## About StartupX\n\nStartupX is a fast-growing edtech startup transforming how students learn and prepare for competitive exams. We're backed by top-tier VCs and are scaling rapidly across India.\n\n## The Role\n\nWe're looking for a passionate **Backend Engineer** to help us scale our platform to serve millions of students. You'll work with cutting-edge technologies and have a direct impact on our product.\n\n### Responsibilities\n\n- Design and develop scalable backend services using Python and Django\n- Build and maintain RESTful APIs for mobile and web applications\n- Optimize database queries and improve system performance\n- Implement caching strategies using Redis\n- Work with DevOps team to deploy and monitor applications\n- Write clean, testable, and well-documented code\n\n### Requirements\n\n- **2-4 years** of experience in backend development\n- Strong expertise in **Python** and **Django** framework\n- Experience with **PostgreSQL** and database optimization\n- Knowledge of **Redis** for caching and session management\n- Familiarity with **Docker** and containerization\n- Experience building **REST APIs** and understanding of API best practices\n- Understanding of software design patterns and principles\n\n### Good to Have\n\n- Experience with message queues (RabbitMQ, Celery)\n- Knowledge of microservices architecture\n- Familiarity with AWS services\n- Experience with GraphQL\n- Understanding of data structures and algorithms\n\n### Why Join Us\n\n- Early-stage equity options\n- Work directly with founders\n- Fast-paced learning environment\n- Flexible work hours\n- Monthly team outings and hackathons"
+    },
+    {
+      "id": "jd-004",
+      "company": "CloudFirst Technologies",
+      "companyLogo": "/logos/cloudfirst.png",
+      "role": "DevOps Engineer",
+      "location": "Pune, India",
+      "experience": "4-6 years",
+      "postedDate": "2025-08-03",
+      "jobType": "Full-time",
+      "salary": "₹18-25 LPA",
+      "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "Jenkins", "Python"],
+      "description": "## About CloudFirst Technologies\n\nCloudFirst Technologies is a cloud consulting firm helping enterprises migrate and optimize their infrastructure. We work with Fortune 1000 companies to modernize their technology stack.\n\n## Position Summary\n\nWe're seeking an experienced **DevOps Engineer** to join our cloud infrastructure team. You'll be responsible for designing, implementing, and maintaining cloud-native solutions for our enterprise clients.\n\n### Key Responsibilities\n\n- Design and implement CI/CD pipelines using Jenkins and GitLab CI\n- Manage and optimize Kubernetes clusters for production workloads\n- Automate infrastructure provisioning using Terraform and CloudFormation\n- Monitor system performance and implement logging solutions\n- Collaborate with development teams to improve deployment processes\n- Implement security best practices and compliance requirements\n- Provide on-call support for production systems\n\n### Required Skills & Experience\n\n- **4-6 years** of experience in DevOps/SRE role\n- Strong expertise in **AWS** services (EC2, ECS, RDS, S3, etc.)\n- Hands-on experience with **Kubernetes** in production\n- Proficiency in **Docker** and container orchestration\n- Experience with **Terraform** for infrastructure as code\n- Strong scripting skills in **Python** or Bash\n- Experience with **Jenkins** or similar CI/CD tools\n- Understanding of networking, security, and Linux administration\n\n### Preferred Qualifications\n\n- AWS certifications (Solutions Architect, DevOps Engineer)\n- Experience with monitoring tools (Prometheus, Grafana, ELK stack)\n- Knowledge of GitOps practices\n- Experience with service mesh (Istio, Linkerd)\n- Understanding of cloud cost optimization\n\n### What We Offer\n\n- Competitive compensation with performance bonuses\n- Opportunity to work with cutting-edge technologies\n- Cloud certification sponsorship\n- Flexible work arrangements\n- Comprehensive health coverage"
+    },
+    {
+      "id": "jd-005",
+      "company": "DataMinds Analytics",
+      "companyLogo": "/logos/dataminds.png",
+      "role": "Data Engineer",
+      "location": "Gurgaon, India",
+      "experience": "3-6 years",
+      "postedDate": "2025-07-28",
+      "jobType": "Full-time",
+      "salary": "₹16-24 LPA",
+      "skills": ["Python", "Spark", "SQL", "Airflow", "AWS", "Kafka"],
+      "description": "## About DataMinds Analytics\n\nDataMinds Analytics is a leading data intelligence company helping businesses make data-driven decisions. We process billions of data points daily to provide actionable insights to our clients.\n\n## The Opportunity\n\nWe're looking for a skilled **Data Engineer** to join our data platform team. You'll build and maintain data pipelines that power analytics for some of India's largest companies.\n\n### What You'll Do\n\n- Design and build scalable data pipelines using Apache Spark\n- Develop ETL workflows using Apache Airflow\n- Build real-time data streaming solutions with Kafka\n- Optimize data storage and retrieval in data lakes and warehouses\n- Collaborate with data scientists to implement ML pipelines\n- Ensure data quality and implement data governance practices\n- Monitor and troubleshoot data pipeline issues\n\n### Must-Have Skills\n\n- **3-6 years** of experience in data engineering\n- Strong programming skills in **Python** and **SQL**\n- Hands-on experience with **Apache Spark** for large-scale data processing\n- Experience with workflow orchestration using **Apache Airflow**\n- Knowledge of **AWS** data services (S3, EMR, Glue, Redshift)\n- Experience with streaming data using **Kafka** or similar technologies\n- Understanding of data modeling and warehouse concepts\n- Strong problem-solving and analytical skills\n\n### Nice to Have\n\n- Experience with Databricks or similar platforms\n- Knowledge of machine learning pipelines\n- Familiarity with data visualization tools\n- Experience with Delta Lake or similar technologies\n- Understanding of data security and privacy regulations\n\n### Perks & Benefits\n\n- Competitive salary with annual increments\n- Work with cutting-edge big data technologies\n- Learning and development programs\n- Health and wellness benefits\n- Hybrid work model available"
+    }
+  ]
+}
