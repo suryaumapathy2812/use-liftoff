@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Brain, MessageCircle, BookOpen, AlertTriangle, ChevronRight, FileText, BarChart3, ArrowLeft } from "lucide-react";

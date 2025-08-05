@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { Eye, Building2, Calendar, Award } from "lucide-react";
 import attendedInterviews from "@/data/attended-interviews.json";

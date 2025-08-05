@@ -8,10 +8,10 @@ import {
 } from "@livekit/components-react";
 import { Room, Track, RoomEvent } from "livekit-client";
 import "@livekit/components-styles";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function Page() {
+function RoomContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -155,5 +155,13 @@ function MyVideoConference() {
         </div>
       ))}
     </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RoomContent />
+    </Suspense>
   );
 }

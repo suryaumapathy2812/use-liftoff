@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { RadioGroup } from "@headlessui/react";
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
@@ -93,7 +93,6 @@ export default function DemoPage() {
                 duration: 0.75,
                 ease: [0.165, 0.84, 0.44, 1],
               }}
-              className=""
             >
               <h2 className="text-4xl font-bold text-[#1E2B3A]">
                 Select a category
@@ -220,7 +219,6 @@ export default function DemoPage() {
                 duration: 0.65,
                 ease: [0.165, 0.84, 0.44, 1],
               }}
-              className=""
             >
               <h2 className="text-4xl font-bold text-[#1E2B3A]">
                 Choose your agent

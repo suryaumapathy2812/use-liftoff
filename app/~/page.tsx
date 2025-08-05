@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import categoriesData from "../../data/categories.json";
 import { MessageSquare, BarChart3, FileText, Calendar, TrendingUp, Clock } from "lucide-react";
 

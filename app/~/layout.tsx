@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset className="bg-[#FCFCFC]"> 
+      <SidebarInset className="bg-[#FCFCFC]">
         <main className="px-6 py-6">
           <header className="h-12 flex items-center justify-between mb-6">
             <SidebarTrigger />

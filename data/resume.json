@@ -1,0 +1,145 @@
+{
+  "personalInfo": {
+    "fullName": "Surya Umapathy",
+    "email": "suryaumapathy2812@gmail.com",
+    "phone": "+919597543516",
+    "location": "Chennai, India",
+    "linkedin": "https://linkedin.com/in/suryaumapathy",
+    "github": "https://github.com/suryaumapathy2812",
+    "website": "https://suryaumapathy.in/"
+  },
+  "summary": "Software Engineer with over 5 years of experience specializing in web development, software design, and deployment. Proven success in leading large-scale projects, including: Developed an admissions system at Freshworks Academy, supporting over 3500 candidates. Designed a global volunteer management portal for Freshworks, utilized by 5000+ employees. Built educational tools that reduced student evaluation time by 95%. Currently pursuing an Executive Post Graduate Program (EPGP) in Machine Learning & AI at IIIT Bangalore, expanding my expertise in advanced AI applications. Eager to leverage technical and AI knowledge to drive innovation and project success in a dynamic tech environment.",
+  "workExperience": [
+    {
+      "id": "freshworks",
+      "company": "Freshworks",
+      "position": "Full Stack Developer", 
+      "startDate": "Nov 2021",
+      "endDate": "Present",
+      "location": "Chennai, India",
+      "bulletPoints": [
+        "Led the development of the FSSA Admissions system, supporting 3500+ candidates with test-taking, CRM, and automation features.",
+        "Designed and built the Global Giving Portal for volunteer management, engaging 5000+ employees in CSR initiatives.",
+        "Developed educational tools (visualizers, automation scripts), reducing student code evaluation time by 95%.",
+        "Managed and deployed projects on AWS and E2E Networks, ensuring scalability and high availability.",
+        "Configured CI/CD pipelines to optimize operational efficiency for student project development.",
+        "Conducted technical training for 120+ students in web development, Ruby, Java, and MySQL."
+      ]
+    },
+    {
+      "id": "assay-clinical",
+      "company": "Assay Clinical Research",
+      "position": "Software Developer",
+      "startDate": "Apr 2020",
+      "endDate": "Oct 2021", 
+      "location": "Chennai, India",
+      "bulletPoints": [
+        "Optimized data structures as part of the database architecture team, improving information flow efficiency.",
+        "Integrated RESTful APIs and enhanced front-end features, resulting in better user interaction and experience."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "global-giving-portal",
+      "name": "Global Giving Portal",
+      "company": "Freshworks",
+      "startDate": null,
+      "endDate": null,
+      "location": null,
+      "description": "Designed and implemented an employee volunteer management tool for 5000+ Freshworks employees",
+      "technologies": ["React", "Next.js", "TypeScript", "PostgreSQL", "AWS"],
+      "impact": "Facilitated seamless volunteer management and increased engagement in corporate social responsibility initiatives.",
+      "bulletPoints": []
+    },
+    {
+      "id": "ai-extraction-reader",
+      "name": "AI-Driven Extraction/Reader",
+      "company": null,
+      "startDate": null,
+      "endDate": null,
+      "location": null,
+      "description": "Doc-Con - AI Data Extraction/Reader: a Python application incorporating OpenAI, LangChain, and Pinecone to implement RAG agents, allowing users to upload documents and interactively query for detailed insights, making it a powerful tool for extracting and analyzing information from large datasets.",
+      "technologies": ["Python", "OpenAI", "LangChain", "Pinecone"],
+      "impact": null,
+      "bulletPoints": []
+    },
+    {
+      "id": "custom-libraries-github-actions",
+      "name": "Custom Libraries and GitHub Actions",
+      "company": null,
+      "startDate": null,
+      "endDate": null,
+      "location": null,
+      "description": "Created enhanced code analyzers",
+      "technologies": [],
+      "impact": null,
+      "bulletPoints": []
+    }
+  ],
+  "skills": {
+    "languagesFrameworks": [
+      "React",
+      "Angular", 
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Next.js",
+      "Rest APIs",
+      "Python"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB", 
+      "Redis"
+    ],
+    "cloudDevOps": [
+      "AWS",
+      "Azure",
+      "GCP",
+      "Docker",
+      "Firebase",
+      "Git",
+      "CI/CD Pipelines"
+    ],
+    "aiTools": [
+      "OpenAI",
+      "LangChain",
+      "Pinecone"
+    ]
+  },
+  "education": [
+    {
+      "id": "iiit-bangalore",
+      "institution": "IIIT - Bangalore",
+      "degree": "Executive Post Graduate Program (EPGP), Machine Learning & AI",
+      "startDate": "Feb 2024",
+      "endDate": "Present",
+      "location": "Bangalore, IN",
+      "gpa": null,
+      "achievements": [],
+      "coursework": []
+    },
+    {
+      "id": "ckn-college",
+      "institution": "C. Kandhaswami Naidu College for Men",
+      "degree": "Bachelor of Arts, Computer Science",
+      "startDate": "Jun 2016", 
+      "endDate": "Mar 2019",
+      "location": "Chennai, IN",
+      "gpa": null,
+      "achievements": [],
+      "coursework": []
+    }
+  ],
+  "analysisScore": {
+    "overall": "A",
+    "rating": "EXCELLENT",
+    "urgentFix": 1,
+    "criticalFix": 0,
+    "optionalFix": 0,
+    "lastAnalyzed": "180 days ago",
+    "creditsAvailable": 1
+  }
+}
