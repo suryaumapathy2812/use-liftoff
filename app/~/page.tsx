@@ -48,13 +48,13 @@ export default function DashboardPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.75, ease: [0.165, 0.84, 0.44, 1] }}
       >
-        <h1 className="text-3xl font-bold text-[#1E2B3A] mb-2">
+        <h1 className="text-4xl font-bold text-[#1E2B3A]">
           Welcome to your Dashboard
         </h1>
-        <p className="text-lg text-[#1a2b3b]">
-          Track your interview progress and improve your skills
+        <p className="text-[14px] leading-[20px] text-[#1a2b3b] font-normal mt-4">
+          Track your interview progress and improve your skills with personalized practice sessions.
         </p>
       </motion.div>
 
@@ -65,7 +65,7 @@ export default function DashboardPage() {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
       >
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Total Interviews</p>
@@ -75,7 +75,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">This Week</p>
@@ -85,7 +85,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Avg Score</p>
@@ -95,7 +95,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-300">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Practice Time</p>
@@ -114,7 +114,7 @@ export default function DashboardPage() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-8"
       >
         {/* Practice Categories */}
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-300">
           <h2 className="text-xl font-bold text-[#1E2B3A] mb-6">Practice Categories</h2>
           <div className="space-y-4">
             {categoriesData.categories.map((category, index) => {

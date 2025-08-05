@@ -21,22 +21,22 @@ export default function InterviewsPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.75, ease: [0.165, 0.84, 0.44, 1] }}
       >
-        <h1 className="text-3xl font-bold text-[#1E2B3A] mb-2">
+        <h1 className="text-4xl font-bold text-[#1E2B3A]">
           Choose a Position
         </h1>
-        <p className="text-lg text-[#1a2b3b]">
-          Select a job position to practice your interview skills
+        <p className="text-[14px] leading-[20px] text-[#1a2b3b] font-normal mt-4">
+          Select a job position to practice your interview skills with our AI interviewer.
         </p>
       </motion.div>
 
       {/* Job Cards Grid */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 cursor-pointer"
+        transition={{ duration: 0.65, ease: [0.165, 0.84, 0.44, 1] }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 cursor-pointer"
       >
         {jobDescriptions.jobDescriptions.map((job, index) => (
           <Link
@@ -47,59 +47,42 @@ export default function InterviewsPage() {
               key={job.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.05 * index }}
-              className="group bg-white rounded-xl shadow-sm hover:shadow-lg p-6 transition-all duration-200 border border-gray-100 hover:border-[#407BBF]/20"
+              transition={{ duration: 0.4, delay: 0.05 * index, ease: [0.165, 0.84, 0.44, 1] }}
+              className="group bg-white rounded-lg border border-gray-300 p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:border-[#1E2B3A] focus:outline-none"
             >
-              {/* Company Header */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#407BBF]/10 rounded-lg flex items-center justify-center">
-                  <Building2 className="w-6 h-6 text-[#407BBF]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[#1E2B3A]">{job.company}</h3>
-                  <p className="text-sm text-gray-500">{job.jobType}</p>
-                </div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="flex items-center">
+                  <span className="flex flex-col text-sm">
+                    <span className="font-medium text-gray-900">
+                      {job.company}
+                    </span>
+                    <span className="text-gray-500">
+                      <span className="block sm:inline">
+                        {job.role} • {job.location}
+                      </span>
+                    </span>
+                  </span>
+                </span>
               </div>
 
-              {/* Role Title */}
-              <h4 className="text-lg font-semibold text-[#1E2B3A] mb-3">
-                {job.role}
-              </h4>
-
-              {/* Job Details */}
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <MapPin className="w-4 h-4 text-gray-400" />
-                  <span>{job.location}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <Briefcase className="w-4 h-4 text-gray-400" />
-                  <span>{job.experience}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <Clock className="w-4 h-4 text-gray-400" />
-                  <span>Posted {new Date(job.postedDate).toLocaleDateString()}</span>
-                </div>
-              </div>
-
-              {/* Salary */}
               <div className="mb-4">
-                <p className="text-sm font-medium text-[#407BBF]">{job.salary}</p>
+                <p className="text-[13px] text-gray-600 mb-2">{job.experience}</p>
+                <p className="text-[13px] font-medium text-[#1E2B3A]">{job.salary}</p>
               </div>
 
               {/* Skills */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {job.skills.slice(0, 3).map((skill, skillIndex) => (
+              <div className="flex flex-wrap gap-2">
+                {job.skills.slice(0, 4).map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full"
+                    className="text-[11px] px-2 py-1 bg-gray-100 text-gray-600 rounded"
                   >
                     {skill}
                   </span>
                 ))}
-                {job.skills.length > 3 && (
-                  <span className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
-                    +{job.skills.length - 3} more
+                {job.skills.length > 4 && (
+                  <span className="text-[11px] px-2 py-1 bg-gray-100 text-gray-600 rounded">
+                    +{job.skills.length - 4}
                   </span>
                 )}
               </div>

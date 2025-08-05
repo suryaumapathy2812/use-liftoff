@@ -37,22 +37,22 @@ export default function InterviewReportsPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.75, ease: [0.165, 0.84, 0.44, 1] }}
       >
-        <h1 className="text-3xl font-bold text-[#1E2B3A] mb-2">
+        <h1 className="text-4xl font-bold text-[#1E2B3A]">
           Interview Reports
         </h1>
-        <p className="text-lg text-[#1a2b3b]">
-          View your interview performance history and detailed reports
+        <p className="text-[14px] leading-[20px] text-[#1a2b3b] font-normal mt-4">
+          View your interview performance history and detailed analysis reports.
         </p>
       </motion.div>
 
       {/* Reports Table */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="bg-white rounded-xl shadow-sm border border-gray-100"
+        transition={{ duration: 0.65, ease: [0.165, 0.84, 0.44, 1] }}
+        className="bg-white rounded-lg border border-gray-300 shadow-sm"
       >
         <Table>
           <TableHeader>
@@ -108,7 +108,7 @@ export default function InterviewReportsPage() {
                   </TableCell>
                   <TableCell>
                     <Link href={`/~/reports/${interview.id}`}>
-                      <button className="flex items-center gap-2 text-[#407BBF] hover:text-[#407BBF]/80 font-medium text-sm transition-colors">
+                      <button className="flex items-center gap-2 text-[#1E2B3A] hover:text-[#1E2B3A]/80 font-medium text-[13px] transition-colors">
                         <Eye className="w-4 h-4" />
                         View
                       </button>

@@ -35,11 +35,19 @@ function SubmitButton({ selectedRound, selectedFile }: { selectedRound: string; 
     <button
       type="submit"
       disabled={isDisabled}
-      className={`w-full rounded-lg px-6 py-3 text-sm font-semibold transition-all flex items-center justify-center text-white gap-2 ${
+      className={`w-full rounded-full px-4 py-2 text-[13px] font-semibold transition-all flex items-center justify-center text-white gap-2 active:scale-95 scale-100 duration-75 ${
         isDisabled
           ? "bg-gray-400 cursor-not-allowed"
-          : "bg-[#407BBF] hover:bg-[#407BBF]/90"
+          : "bg-[#1E2B3A] hover:[linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #0D2247]"
       }`}
+      style={
+        !isDisabled
+          ? {
+              boxShadow:
+                "0px 1px 4px rgba(13, 34, 71, 0.17), inset 0px 0px 0px 1px #061530, inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1)"
+            }
+          : undefined
+      }
     >
       {pending ? (
         <>
@@ -171,55 +179,38 @@ export default function InterviewDetailPage() {
   };
 
   return (
-    <div className="relative">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Job Details (2/3 width) */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.75, ease: [0.165, 0.84, 0.44, 1] }}
             >
               {/* Job Header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-[#407BBF]/10 rounded-lg flex items-center justify-center">
-                  <Building2 className="w-8 h-8 text-[#407BBF]" />
-                </div>
-                <div className="flex-1">
-                  <h1 className="text-2xl font-bold text-[#1E2B3A]">{job.company}</h1>
-                  <h2 className="text-xl font-semibold text-[#1a2b3b]">{job.role}</h2>
-                </div>
+              <div className="mb-6">
+                <h1 className="text-4xl font-bold text-[#1E2B3A]">{job.company}</h1>
+                <h2 className="text-[14px] leading-[20px] text-[#1a2b3b] font-normal mt-2">{job.role}</h2>
               </div>
 
-              {/* Job Info Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8 p-4 bg-white rounded-lg border border-gray-100">
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <MapPin className="w-4 h-4 text-gray-400" />
-                  <span>{job.location}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <Briefcase className="w-4 h-4 text-gray-400" />
-                  <span>{job.experience}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <Calendar className="w-4 h-4 text-gray-400" />
-                  <span>Posted {new Date(job.postedDate).toLocaleDateString()}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-[#1a2b3b]">
-                  <IndianRupee className="w-4 h-4 text-gray-400" />
-                  <span className="font-medium text-[#407BBF]">{job.salary}</span>
+              {/* Job Info */}
+              <div className="mb-6">
+                <div className="space-y-2">
+                  <p className="text-[13px] text-gray-600">{job.location} • {job.experience}</p>
+                  <p className="text-[13px] font-medium text-[#1E2B3A]">{job.salary}</p>
+                  <p className="text-[13px] text-gray-600">Posted {new Date(job.postedDate).toLocaleDateString()}</p>
                 </div>
               </div>
 
               {/* Skills */}
-              <div className="mb-8">
+              <div className="mb-6">
                 <h3 className="text-lg font-semibold text-[#1E2B3A] mb-3">Required Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {job.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="text-sm px-3 py-1 bg-[#407BBF]/10 text-[#407BBF] rounded-full font-medium"
+                      className="text-[11px] px-2 py-1 bg-gray-100 text-gray-600 rounded"
                     >
                       {skill}
                     </span>
@@ -228,7 +219,7 @@ export default function InterviewDetailPage() {
               </div>
 
               {/* Job Description */}
-              <div className="bg-white rounded-lg border border-gray-100 p-6">
+              <div className="bg-white rounded-lg border border-gray-300 p-6 shadow-sm">
                 <h3 className="text-lg font-semibold text-[#1E2B3A] mb-4">Job Description</h3>
                 <div className="prose prose-sm max-w-none text-[#1a2b3b] leading-relaxed">
                   <ReactMarkdown
@@ -276,12 +267,12 @@ export default function InterviewDetailPage() {
           <div className="lg:col-span-1">
             <div className="sticky top-4">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-6"
+                transition={{ duration: 0.65, ease: [0.165, 0.84, 0.44, 1] }}
+                className="bg-white rounded-lg border border-gray-300 p-6 shadow-sm"
               >
-                <h2 className="text-xl font-semibold text-[#1E2B3A] mb-6">
+                <h2 className="text-lg font-semibold text-[#1E2B3A] mb-6">
                   Start Your Interview
                 </h2>
 
@@ -290,7 +281,7 @@ export default function InterviewDetailPage() {
                   
                   {/* Interview Round Selection */}
                   <div className="mb-6">
-                    <label className="block text-sm font-semibold text-[#1E2B3A] mb-2">
+                    <label className="block text-[13px] font-medium text-gray-900 mb-2">
                       Select Interview Round *
                     </label>
                     <Select value={selectedRound} onValueChange={setSelectedRound}>
@@ -328,17 +319,17 @@ export default function InterviewDetailPage() {
 
                   {/* File Upload */}
                   <div className="mb-6">
-                    <label className="block text-sm font-semibold text-[#1E2B3A] mb-2">
+                    <label className="block text-[13px] font-medium text-gray-900 mb-2">
                       Upload Resume *
                     </label>
                     
                     <div
                       className={`relative border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
                         dragActive 
-                          ? "border-[#407BBF] bg-[#407BBF]/5" 
+                          ? "border-[#1E2B3A] bg-[#1E2B3A]/5" 
                           : selectedFile 
                           ? "border-green-400 bg-green-50" 
-                          : "border-gray-200 hover:border-[#407BBF] bg-gray-50"
+                          : "border-gray-300 hover:border-[#1E2B3A] bg-gray-50"
                       }`}
                       onDragEnter={handleDrag}
                       onDragLeave={handleDrag}
@@ -368,20 +359,20 @@ export default function InterviewDetailPage() {
                         </div>
                       ) : (
                         <div className="text-center">
-                          <div className="w-12 h-12 bg-[#407BBF]/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <Upload className="w-6 h-6 text-[#407BBF]" />
+                          <div className="w-12 h-12 bg-[#1E2B3A]/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <Upload className="w-6 h-6 text-[#1E2B3A]" />
                           </div>
-                          <p className="text-sm font-medium text-[#1E2B3A] mb-1">
+                          <p className="text-[13px] font-medium text-gray-900 mb-1">
                             Drop your resume here
                           </p>
-                          <p className="text-xs text-[#1a2b3b]">
+                          <p className="text-[11px] text-gray-500">
                             or click to browse (PDF only)
                           </p>
                         </div>
                       )}
                     </div>
 
-                    <p className="mt-2 text-xs text-[#1a2b3b]">
+                    <p className="mt-2 text-[11px] text-gray-500">
                       Maximum file size: 10MB
                     </p>
                   </div>
@@ -398,23 +389,23 @@ export default function InterviewDetailPage() {
                 </form>
 
                 {/* Instructions */}
-                <div className="mt-6 p-4 bg-[#407BBF]/5 rounded-lg">
-                  <h4 className="text-sm font-semibold text-[#1E2B3A] mb-2">Before you start:</h4>
-                  <ul className="text-xs text-[#1a2b3b] space-y-1.5">
+                <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <h4 className="text-[13px] font-medium text-gray-900 mb-2">Before you start:</h4>
+                  <ul className="text-[11px] text-gray-600 space-y-1.5">
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-[#407BBF] rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-[#1E2B3A] rounded-full mt-1 mr-2 flex-shrink-0"></span>
                       Ensure you're in a quiet environment
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-[#407BBF] rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-[#1E2B3A] rounded-full mt-1 mr-2 flex-shrink-0"></span>
                       Have a stable internet connection
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-[#407BBF] rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-[#1E2B3A] rounded-full mt-1 mr-2 flex-shrink-0"></span>
                       Allow camera and microphone access
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-[#407BBF] rounded-full mt-1 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-[#1E2B3A] rounded-full mt-1 mr-2 flex-shrink-0"></span>
                       Keep your resume handy for reference
                     </li>
                   </ul>
@@ -423,7 +414,6 @@ export default function InterviewDetailPage() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
