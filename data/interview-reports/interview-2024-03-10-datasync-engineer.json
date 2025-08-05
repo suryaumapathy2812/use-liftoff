@@ -1,0 +1,108 @@
+{
+  "reportId": "interview-2024-03-10-datasync-engineer",
+  "timestamp": "2024-03-10T09:15:00Z",
+  "candidate": {
+    "name": "John Doe",
+    "profileUploaded": true
+  },
+  "interviewer": {
+    "name": "Principal Engineer",
+    "type": "system-design",
+    "specialty": "Data Engineering & Architecture"
+  },
+  "session": {
+    "duration": 3300,
+    "totalQuestions": 4,
+    "questionsAnswered": 4
+  },
+  "performanceScore": {
+    "overall": 91,
+    "breakdown": {
+      "technical": 94,
+      "communication": 88,
+      "problemSolving": 92,
+      "behavioral": 90
+    }
+  },
+  "behavioralAnalysis": {
+    "emotionalState": {
+      "confident": 90,
+      "nervous": 8,
+      "engaged": 95,
+      "frustrated": 5,
+      "overall": 90
+    },
+    "confidenceLevel": 88,
+    "insights": [
+      "Exceptional confidence when discussing data architecture and pipeline design",
+      "Demonstrated deep engagement with complex system design questions",
+      "Showed enthusiasm when explaining distributed systems concepts",
+      "Maintained composure throughout challenging scalability discussions"
+    ]
+  },
+  "speechAnalysis": {
+    "speaking": {
+      "clarityScore": 92,
+      "paceScore": 85,
+      "volumeConsistency": 88,
+      "overall": 88
+    },
+    "listening": {
+      "responseTime": 85,
+      "comprehension": 95,
+      "followUpQuestions": 90,
+      "overall": 90
+    },
+    "proficiency": {
+      "vocabularyRange": 88,
+      "grammarAccuracy": 92,
+      "technicalTerminology": 98,
+      "overall": 93
+    },
+    "overallAverage": 90,
+    "insights": [
+      "Outstanding use of technical terminology specific to data engineering",
+      "Excellent ability to explain complex distributed systems concepts clearly",
+      "Strong active listening demonstrated by building on interviewer's questions",
+      "Professional communication style with appropriate technical depth"
+    ]
+  },
+  "fieldKnowledgeEvaluation": {
+    "understanding": 95,
+    "applying": 90,
+    "analyzing": 92,
+    "insights": [
+      "Deep understanding of data pipeline architectures and streaming systems",
+      "Excellent knowledge of Apache Kafka, Spark, and modern data stack",
+      "Strong grasp of database optimization and distributed data storage",
+      "Demonstrated experience with cloud data platforms and containerization"
+    ]
+  },
+  "reportSummary": {
+    "strengths": [
+      "Exceptional technical knowledge in data engineering and system design",
+      "Outstanding problem-solving approach with systematic thinking",
+      "Excellent communication of complex technical concepts",
+      "Strong understanding of scalability and performance optimization"
+    ],
+    "areasForImprovement": [
+      "Could explore more cost optimization strategies in cloud environments",
+      "Consider discussing data governance and compliance aspects more",
+      "Practice presenting to non-technical stakeholders"
+    ],
+    "overallFeedback": "Exceptional performance demonstrating senior-level expertise in data engineering. The candidate showed deep technical knowledge, excellent problem-solving skills, and clear communication. Highly suitable for complex data infrastructure roles.",
+    "recommendation": "Highly recommended for Data Engineer position. Demonstrates expert-level knowledge and would be valuable for complex data infrastructure projects.",
+    "nextSteps": [
+      "Explore emerging technologies like real-time ML pipelines",
+      "Study advanced data governance and compliance frameworks",
+      "Consider leadership and mentoring opportunities",
+      "Investigate cutting-edge technologies in data mesh architectures"
+    ]
+  },
+  "detailedTranscript": {
+    "available": true,
+    "segments": 32,
+    "totalWords": 4800,
+    "averageResponseLength": 150
+  }
+}

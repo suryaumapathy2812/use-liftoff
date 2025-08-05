@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { gradient } from "@/components/Gradient";
 import categoriesData from "../../data/categories.json";
+import { MessageSquare, BarChart3, FileText, Calendar, TrendingUp, Clock } from "lucide-react";
 
 function BriefcaseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -40,142 +39,193 @@ const iconComponents = {
   microphone: MicrophoneIcon,
 };
 
-export default function CategoriesPage() {
-  useEffect(() => {
-    gradient.initGradient("#gradient-canvas");
-  }, []);
-
+export default function DashboardPage() {
+  const activeCategory = categoriesData.categories.find(cat => cat.status === "active");
+  
   return (
-    <div className="min-h-screen w-screen flex flex-col relative bg-[#F2F3F5] font-inter overflow-hidden">
-      <svg
-        style={{ filter: "contrast(125%) brightness(110%)" }}
-        className="fixed z-[1] w-full h-full opacity-[35%]"
+    <div className="space-y-8">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        <filter id="noise">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency=".7"
-            numOctaves="3"
-            stitchTiles="stitch"
-          ></feTurbulence>
-          <feColorMatrix type="saturate" values="0"></feColorMatrix>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#noise)"></rect>
-      </svg>
+        <h1 className="text-3xl font-bold text-[#1E2B3A] mb-2">
+          Welcome to your Dashboard
+        </h1>
+        <p className="text-lg text-[#1a2b3b]">
+          Track your interview progress and improve your skills
+        </p>
+      </motion.div>
 
-      <main className="flex flex-col justify-center items-center h-screen static md:fixed w-screen overflow-hidden z-[100] px-4 md:px-20">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.15,
-            duration: 0.95,
-            ease: [0.165, 0.84, 0.44, 1],
-          }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[#1E2B3A] mb-4">
-            Choose Your Practice
-          </h1>
-          <p className="text-lg md:text-xl text-[#1a2b3b] max-w-2xl">
-            Select the skill you want to develop with our AI-powered practice sessions
-          </p>
-        </motion.div>
+      {/* Stats Cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">Total Interviews</p>
+              <p className="text-2xl font-bold text-[#1E2B3A]">12</p>
+            </div>
+            <MessageSquare className="h-8 w-8 text-[#407BBF]" />
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl w-full">
-          {categoriesData.categories.map((category, index) => {
-            const IconComponent = iconComponents[category.icon as keyof typeof iconComponents];
-            const isActive = category.status === "active";
-            
-            return (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.3 + index * 0.1,
-                  duration: 0.75,
-                  ease: [0.165, 0.84, 0.44, 1],
-                }}
-              >
-                {isActive ? (
-                  <Link href={category.route}>
-                    <div className="group relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#407BBF]/20 cursor-pointer">
-                      <div className="flex flex-col items-center text-center">
-                        <div className="w-16 h-16 bg-[#407BBF]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#407BBF]/20 transition-colors">
-                          <IconComponent className="w-8 h-8 text-[#407BBF]" />
+        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">This Week</p>
+              <p className="text-2xl font-bold text-[#1E2B3A]">3</p>
+            </div>
+            <Calendar className="h-8 w-8 text-[#407BBF]" />
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">Avg Score</p>
+              <p className="text-2xl font-bold text-[#1E2B3A]">8.2</p>
+            </div>
+            <TrendingUp className="h-8 w-8 text-[#407BBF]" />
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-600">Practice Time</p>
+              <p className="text-2xl font-bold text-[#1E2B3A]">24h</p>
+            </div>
+            <Clock className="h-8 w-8 text-[#407BBF]" />
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Quick Actions */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+      >
+        {/* Practice Categories */}
+        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <h2 className="text-xl font-bold text-[#1E2B3A] mb-6">Practice Categories</h2>
+          <div className="space-y-4">
+            {categoriesData.categories.map((category, index) => {
+              const IconComponent = iconComponents[category.icon as keyof typeof iconComponents];
+              const isActive = category.status === "active";
+              
+              return (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                >
+                  {isActive ? (
+                    <Link href={category.route}>
+                      <div className="group flex items-center p-4 rounded-lg border border-gray-200 hover:border-[#407BBF]/20 hover:bg-[#407BBF]/5 transition-all duration-200 cursor-pointer">
+                        <div className="w-10 h-10 bg-[#407BBF]/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-[#407BBF]/20 transition-colors">
+                          <IconComponent className="w-5 h-5 text-[#407BBF]" />
                         </div>
-                        <h3 className="text-2xl font-bold text-[#1E2B3A] mb-3">
-                          {category.name}
-                        </h3>
-                        <p className="text-[#1a2b3b] leading-relaxed">
-                          {category.description}
-                        </p>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-[#1E2B3A]">{category.name}</h3>
+                          <p className="text-sm text-gray-600">{category.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                ) : (
-                  <div className="relative bg-white/50 rounded-xl p-8 shadow-lg border border-gray-100 opacity-75">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                        <IconComponent className="w-8 h-8 text-gray-400" />
+                    </Link>
+                  ) : (
+                    <div className="flex items-center p-4 rounded-lg border border-gray-200 opacity-60">
+                      <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                        <IconComponent className="w-5 h-5 text-gray-400" />
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-600 mb-3">
-                        {category.name}
-                      </h3>
-                      <p className="text-gray-500 leading-relaxed mb-4">
-                        {category.description}
-                      </p>
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-600">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-600">{category.name}</h3>
+                        <p className="text-sm text-gray-500">{category.description}</p>
+                      </div>
+                      <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
                         Coming Soon
                       </span>
                     </div>
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-12"
-        >
-          <Link
-            href="/"
-            className="group rounded-full px-6 py-3 text-[14px] font-semibold transition-all flex items-center justify-center border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 no-underline gap-x-2 active:scale-95 scale-100 duration-75"
+        {/* Quick Actions */}
+        <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
           >
-            <svg
-              className="w-4 h-4 mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Back to Home
-          </Link>
-        </motion.div>
-      </main>
+            <h2 className="text-xl font-bold text-[#1E2B3A] mb-4">Quick Actions</h2>
+            <div className="space-y-3">
+              <Link
+                href="/~/interviews"
+                className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+              >
+                <div className="flex items-center">
+                  <MessageSquare className="h-5 w-5 text-[#407BBF] mr-3" />
+                  <span className="font-medium text-[#1E2B3A]">Start New Interview</span>
+                </div>
+                <span className="text-gray-400 group-hover:text-[#407BBF] transition-colors">→</span>
+              </Link>
+              
+              <Link
+                href="/~/reports"
+                className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+              >
+                <div className="flex items-center">
+                  <BarChart3 className="h-5 w-5 text-[#407BBF] mr-3" />
+                  <span className="font-medium text-[#1E2B3A]">View Reports</span>
+                </div>
+                <span className="text-gray-400 group-hover:text-[#407BBF] transition-colors">→</span>
+              </Link>
+              
+              <Link
+                href="/~/resume"
+                className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+              >
+                <div className="flex items-center">
+                  <FileText className="h-5 w-5 text-[#407BBF] mr-3" />
+                  <span className="font-medium text-[#1E2B3A]">Update Resume</span>
+                </div>
+                <span className="text-gray-400 group-hover:text-[#407BBF] transition-colors">→</span>
+              </Link>
+            </div>
+          </motion.div>
 
-      <div
-        className="fixed top-0 right-0 w-[80%] md:w-1/2 h-screen bg-[#1F2B3A]/20"
-        style={{
-          clipPath:
-            "polygon(100px 0,100% 0,calc(100% + 225px) 100%, 480px 100%)",
-        }}
-      ></div>
-
-      <canvas
-        id="gradient-canvas"
-        className="fixed top-0 left-0 w-full h-full z-0"
-      ></canvas>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-[#407BBF] to-[#407BBF]/80 rounded-xl p-6 text-white shadow-lg"
+          >
+            <h3 className="text-lg font-bold mb-2">Ready for your next interview?</h3>
+            <p className="text-white/90 mb-4 text-sm">
+              Practice with our AI interviewer and get instant feedback
+            </p>
+            {activeCategory && (
+              <Link
+                href={activeCategory.route}
+                className="inline-flex items-center px-4 py-2 bg-white text-[#407BBF] rounded-lg font-medium hover:bg-gray-50 transition-colors"
+              >
+                Start Practice Session
+              </Link>
+            )}
+          </motion.div>
+        </div>
+      </motion.div>
     </div>
   );
 }

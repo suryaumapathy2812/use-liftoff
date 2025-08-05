@@ -1,0 +1,108 @@
+{
+  "reportId": "interview-2024-03-15-techcorp-senior",
+  "timestamp": "2024-03-15T10:30:00Z",
+  "candidate": {
+    "name": "John Doe",
+    "profileUploaded": true
+  },
+  "interviewer": {
+    "name": "Senior Technical Lead",
+    "type": "coding",
+    "specialty": "Full Stack Development"
+  },
+  "session": {
+    "duration": 3600,
+    "totalQuestions": 6,
+    "questionsAnswered": 6
+  },
+  "performanceScore": {
+    "overall": 85,
+    "breakdown": {
+      "technical": 88,
+      "communication": 83,
+      "problemSolving": 87,
+      "behavioral": 82
+    }
+  },
+  "behavioralAnalysis": {
+    "emotionalState": {
+      "confident": 82,
+      "nervous": 15,
+      "engaged": 88,
+      "frustrated": 8,
+      "overall": 82
+    },
+    "confidenceLevel": 78,
+    "insights": [
+      "Demonstrated excellent confidence throughout the coding challenges with clear problem-solving approach",
+      "Maintained steady composure even during complex algorithm questions",
+      "Showed strong engagement with detailed explanations and follow-up questions",
+      "Minimal signs of stress, indicating good preparation and technical comfort"
+    ]
+  },
+  "speechAnalysis": {
+    "speaking": {
+      "clarityScore": 88,
+      "paceScore": 82,
+      "volumeConsistency": 85,
+      "overall": 85
+    },
+    "listening": {
+      "responseTime": 90,
+      "comprehension": 88,
+      "followUpQuestions": 82,
+      "overall": 87
+    },
+    "proficiency": {
+      "vocabularyRange": 85,
+      "grammarAccuracy": 90,
+      "technicalTerminology": 95,
+      "overall": 90
+    },
+    "overallAverage": 87,
+    "insights": [
+      "Excellent use of technical terminology with precise explanations of coding concepts",
+      "Clear articulation of problem-solving steps with logical flow",
+      "Good pacing during code explanations, allowing interviewer to follow along",
+      "Strong listening skills demonstrated by addressing all parts of complex questions"
+    ]
+  },
+  "fieldKnowledgeEvaluation": {
+    "understanding": 90,
+    "applying": 85,
+    "analyzing": 88,
+    "insights": [
+      "Solid understanding of React hooks and state management patterns",
+      "Demonstrated practical experience with Node.js and database optimization",
+      "Good grasp of time complexity analysis for algorithmic solutions",
+      "Strong knowledge of modern JavaScript features and best practices"
+    ]
+  },
+  "reportSummary": {
+    "strengths": [
+      "Excellent technical foundation with strong coding skills",
+      "Clear communication and explanation of complex concepts",
+      "Good problem-solving methodology with systematic approach",
+      "Strong confidence and engagement throughout the session"
+    ],
+    "areasForImprovement": [
+      "Could provide more detailed time complexity analysis",
+      "Consider discussing edge cases more thoroughly",
+      "Practice explaining trade-offs between different solutions"
+    ],
+    "overallFeedback": "Outstanding performance with strong technical skills and excellent communication. The candidate demonstrated deep understanding of full-stack development concepts and showed great problem-solving abilities. Ready for senior-level responsibilities.",
+    "recommendation": "Strongly recommended for Senior Full Stack Developer position. Excellent technical capabilities with strong communication skills.",
+    "nextSteps": [
+      "Continue practicing system design scenarios",
+      "Explore advanced React patterns and performance optimization",
+      "Study distributed systems concepts for career growth",
+      "Consider contributing to open-source projects"
+    ]
+  },
+  "detailedTranscript": {
+    "available": true,
+    "segments": 42,
+    "totalWords": 4200,
+    "averageResponseLength": 100
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "reportId": "interview-2024-03-02-startup-frontend",
+  "timestamp": "2024-03-02T13:20:00Z",
+  "candidate": {
+    "name": "John Doe",
+    "profileUploaded": true
+  },
+  "interviewer": {
+    "name": "Senior Developer",
+    "type": "coding",
+    "specialty": "Frontend Development"
+  },
+  "session": {
+    "duration": 2100,
+    "totalQuestions": 5,
+    "questionsAnswered": 4
+  },
+  "performanceScore": {
+    "overall": 56,
+    "breakdown": {
+      "technical": 52,
+      "communication": 58,
+      "problemSolving": 54,
+      "behavioral": 60
+    }
+  },
+  "behavioralAnalysis": {
+    "emotionalState": {
+      "confident": 45,
+      "nervous": 42,
+      "engaged": 65,
+      "frustrated": 35,
+      "overall": 52
+    },
+    "confidenceLevel": 48,
+    "insights": [
+      "Showed initial nervousness which affected performance on early questions",
+      "Confidence decreased when faced with advanced React concepts",
+      "Demonstrated good engagement despite technical struggles",
+      "Visible frustration during algorithm implementation, but maintained professionalism"
+    ]
+  },
+  "speechAnalysis": {
+    "speaking": {
+      "clarityScore": 65,
+      "paceScore": 58,
+      "volumeConsistency": 62,
+      "overall": 62
+    },
+    "listening": {
+      "responseTime": 70,
+      "comprehension": 68,
+      "followUpQuestions": 55,
+      "overall": 64
+    },
+    "proficiency": {
+      "vocabularyRange": 60,
+      "grammarAccuracy": 75,
+      "technicalTerminology": 58,
+      "overall": 64
+    },
+    "overallAverage": 63,
+    "insights": [
+      "Communication clarity decreased under pressure during technical challenges",
+      "Some hesitation when explaining complex concepts, indicating knowledge gaps",
+      "Good basic communication skills but struggles with technical precision",
+      "Tendency to speak faster when nervous, affecting clarity"
+    ]
+  },
+  "fieldKnowledgeEvaluation": {
+    "understanding": 58,
+    "applying": 48,
+    "analyzing": 52,
+    "insights": [
+      "Basic understanding of React fundamentals but gaps in advanced concepts",
+      "Struggled with state management and component lifecycle methods",
+      "Limited experience with modern JavaScript features and ES6+ syntax",
+      "Needs improvement in CSS-in-JS and responsive design principles"
+    ]
+  },
+  "reportSummary": {
+    "strengths": [
+      "Good attitude and willingness to learn",
+      "Basic understanding of frontend fundamentals",
+      "Maintained professionalism despite technical challenges",
+      "Showed problem-solving effort even when struggling"
+    ],
+    "areasForImprovement": [
+      "Strengthen React fundamentals and advanced concepts",
+      "Practice algorithmic problem-solving and coding challenges",
+      "Improve technical communication and explanation skills",
+      "Build confidence through more hands-on project experience"
+    ],
+    "overallFeedback": "The candidate shows potential but needs significant improvement in technical skills and confidence. With focused study and practice, could develop into a competent frontend developer. Current level is below requirements for the position.",
+    "recommendation": "Not recommended for current position. Suggest additional training and practice before reapplying. Consider junior-level positions or internship opportunities.",
+    "nextSteps": [
+      "Complete comprehensive React.js course with hands-on projects",
+      "Practice coding challenges on platforms like LeetCode or HackerRank",
+      "Build portfolio projects demonstrating frontend skills",
+      "Study JavaScript fundamentals and modern ES6+ features"
+    ]
+  },
+  "detailedTranscript": {
+    "available": true,
+    "segments": 28,
+    "totalWords": 2100,
+    "averageResponseLength": 75
+  }
+}

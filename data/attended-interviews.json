@@ -1,0 +1,100 @@
+{
+  "attendedInterviews": [
+    {
+      "id": "interview-2024-03-15-techcorp-senior",
+      "company": "TechCorp Solutions",
+      "role": "Senior Full Stack Developer",
+      "interviewType": "coding",
+      "date": "2024-03-15T10:30:00Z",
+      "duration": 3600,
+      "status": "completed",
+      "overallScore": 85,
+      "performance": "Excellent",
+      "interviewer": "Senior Technical Lead"
+    },
+    {
+      "id": "interview-2024-03-12-innovate-product",
+      "company": "InnovateHub Technologies",
+      "role": "Product Manager",
+      "interviewType": "case-study",
+      "date": "2024-03-12T14:00:00Z",
+      "duration": 2700,
+      "status": "completed",
+      "overallScore": 72,
+      "performance": "Good",
+      "interviewer": "VP of Product"
+    },
+    {
+      "id": "interview-2024-03-10-datasync-engineer",
+      "company": "DataSync Analytics",
+      "role": "Data Engineer",
+      "interviewType": "system-design",
+      "date": "2024-03-10T09:15:00Z",
+      "duration": 3300,
+      "status": "completed",
+      "overallScore": 91,
+      "performance": "Excellent",
+      "interviewer": "Principal Engineer"
+    },
+    {
+      "id": "interview-2024-03-08-cloudtech-devops",
+      "company": "CloudTech Systems",
+      "role": "DevOps Engineer",
+      "interviewType": "domain-specific",
+      "date": "2024-03-08T16:45:00Z",
+      "duration": 2400,
+      "status": "completed",
+      "overallScore": 68,
+      "performance": "Satisfactory",
+      "interviewer": "DevOps Team Lead"
+    },
+    {
+      "id": "interview-2024-03-05-fintech-analyst",
+      "company": "FinTech Innovations",
+      "role": "Business Analyst",
+      "interviewType": "hr",
+      "date": "2024-03-05T11:30:00Z",
+      "duration": 1800,
+      "status": "completed",
+      "overallScore": 79,
+      "performance": "Good",
+      "interviewer": "HR Director"
+    },
+    {
+      "id": "interview-2024-03-02-startup-frontend",
+      "company": "StartupXYZ",
+      "role": "Frontend Developer",
+      "interviewType": "coding",
+      "date": "2024-03-02T13:20:00Z",
+      "duration": 2100,
+      "status": "completed",
+      "overallScore": 56,
+      "performance": "Needs Improvement",
+      "interviewer": "Senior Developer"
+    },
+    {
+      "id": "interview-2024-02-28-enterprise-architect",
+      "company": "Enterprise Solutions Ltd",
+      "role": "Solution Architect",
+      "interviewType": "system-design",
+      "date": "2024-02-28T15:00:00Z",
+      "duration": 4200,
+      "status": "completed",
+      "overallScore": 88,
+      "performance": "Excellent",
+      "interviewer": "Chief Technology Officer"
+    },
+    {
+      "id": "interview-2024-02-25-mobile-lead",
+      "company": "Mobile First Inc",
+      "role": "Mobile Development Lead",
+      "interviewType": "problem-solving",
+      "date": "2024-02-25T10:00:00Z",
+      "duration": 2700,
+      "status": "completed",
+      "overallScore": 64,
+      "performance": "Satisfactory",
+      "interviewer": "Engineering Manager"
+    }
+  ]
+}
