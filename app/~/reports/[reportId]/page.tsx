@@ -112,7 +112,7 @@ export default function IndividualReportPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#F2F3F5] flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -128,7 +128,7 @@ export default function IndividualReportPage() {
 
   if (error || !report) {
     return (
-      <div className="min-h-screen bg-[#F2F3F5] flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -149,8 +149,7 @@ export default function IndividualReportPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F2F3F5] py-8 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="space-y-8">
         {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -612,7 +611,6 @@ export default function IndividualReportPage() {
             </button>
           </Link>
         </motion.div>
-      </div>
     </div>
   );
 }
